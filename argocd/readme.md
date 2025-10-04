@@ -20,8 +20,8 @@ kubectl get nodes
 kubectl cluster-info
 ```
 
-## Instalacao do argocd
-### INSTACAO VIA HELM
+## INSTALACAO DO ARGOCD
+### (OPCAO 1 - Instalacao via helm )
 Podemos instalar o argo via helm
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
