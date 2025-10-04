@@ -3,7 +3,7 @@
 ## Criar cluster EKS  
 Usaremos o kind para provisionar o cluster kubernetes localmente, lembre-se que o docker precisa estar em execucao para criar os containers para emular ambiente eks localmente
 
-## Passo a passo
+## Siga o passo a passo abaixo
 Entre no diretorio:
 ```bash
 cd argocd/
