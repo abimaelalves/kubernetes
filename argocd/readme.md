@@ -40,19 +40,44 @@ helm install argo-cd argo/argo-cd --namespace argocd
 
 4 - Verifique se os pods do Argo CD estão sendo executados corretamente no namespace argocd
 ```bash
-kubectl get pods -n argocd
+kubectl get po,svc,deployment -n argocd
 ```
 
-5 - Para validar se ocorreu tudo certo, execute o comando para expor a porta 8080 da sua maquina
+5 - Filtre o nome do servico relacionado ao argocd server onde a porta está sendo mapeada como (80/TCP,443/TCP)
+```bash
+kubectl get svc -n argocd | grep argocd-server
+```
+
+6 - Para validar se ocorreu tudo certo, execute o comando para expor a porta 8080 da sua maquina
 ```bash
 kubectl port-forward service/argo-cd-argocd-server -n argocd 8080:443
 ```
 
-6 - Execute o comando abaixo para pegar as credenciais de acesso, usuario default é (admin).
+7 - Execute o comando abaixo para pegar as credenciais de acesso, usuario default é (admin).
 
 Obs: Nao copie o caracter (%)
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
-### (OPCAO 2 - Instalacao via helm)
+### (OPCAO 2 - Instalacao comum)
+1 - Crie o namespace argocd
+```bash
+kubectl create namespace argocd
+```
+
+2 - Verifique se os pods do Argo CD estão sendo executados corretamente no namespace argocd
+```bash
+kubectl get po,svc,deployment -n argocd
+```
+
+3 - Filtre o nome do servico relacionado ao argocd server onde a porta está sendo mapeada como (80/TCP,443/TCP)
+```bash
+kubectl get svc -n argocd | grep argocd-server
+```
+
+4 - Para validar se ocorreu tudo certo, execute o comando para expor a porta 8080 da sua maquina
+```bash
+kubectl port-forward service/argocd-server -n argocd 8080:443
+```
+
