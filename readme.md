@@ -7,6 +7,7 @@ Antes de começar, certifique-se de ter as intalacoes abaixo:
 - Docker
 - kind
 - kubectl
+- helm
 
 ## O Repositorio esta dividido por assuntos
 Estrutura por assuntos:

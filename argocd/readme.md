@@ -19,3 +19,10 @@ Execute os comandos abaixo para verificar informacao do seu cluster e os nodes c
 kubectl get nodes
 kubectl cluster-info
 ```
+
+## Instalacao do argocd
+Podemos instalar o argo via helm
+```bash
+    helm repo add argo https://argoproj.github.io/argo-helm
+    helm repo update
+```
