@@ -14,8 +14,10 @@ Estrutura por assuntos:
 
 ## Dentro de cada assunto/diretorio terá um readme para consulta
 Exemplo:
+```bash
 ├── argocd
 │   └── readme.md
 ├── istio
 │   └── readme.md
 └── readme.md
+```
