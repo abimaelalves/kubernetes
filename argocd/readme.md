@@ -29,5 +29,21 @@ helm repo update
 
 Criar namespace argocd
 ```bash
-kubectl create namespace argo-cd
+kubectl create namespace argocd
+```
+
+Instalar Argo CD com helm (se atente ao namespace)
+```bash
+helm install argo-cd argo/argo-cd --namespace argocd
+```
+
+Para validar se ocorreu tudo certo, basta executar o seguinte comando para expor a porta 8080 da sua maquina
+```bash
+kubectl port-forward service/argo-cd-argocd-server -n argocd 8080:443
+```
+
+Execute o comando abaixo para pegar as credenciais de acesso, usuario default é (admin).
+Obs: Caso na saida do comando abaixo aparecer um caracter de (%) nao copie ele, apenas copie a senha do caracter (%) para traz
+```bash
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
