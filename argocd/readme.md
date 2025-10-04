@@ -43,7 +43,7 @@ helm install argo-cd argo/argo-cd --namespace argocd
 kubectl get pods -n argocd
 ```
 
-5 - Para validar se ocorreu tudo certo, basta executar o seguinte comando para expor a porta 8080 da sua maquina
+5 - Para validar se ocorreu tudo certo, execute o comando para expor a porta 8080 da sua maquina
 ```bash
 kubectl port-forward service/argo-cd-argocd-server -n argocd 8080:443
 ```
