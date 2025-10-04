@@ -13,3 +13,9 @@ Estrutura por assuntos:
 - Istio
 
 ## Dentro de cada assunto/diretorio terá um readme para consulta
+Exemplo:
+├── argocd
+│   └── readme.md
+├── istio
+│   └── readme.md
+└── readme.md
