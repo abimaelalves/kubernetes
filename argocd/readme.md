@@ -43,6 +43,7 @@ kubectl port-forward service/argo-cd-argocd-server -n argocd 8080:443
 ```
 
 Execute o comando abaixo para pegar as credenciais de acesso, usuario default é (admin).
+
 Obs: Caso na saida do comando abaixo aparecer um caracter de (%) nao copie ele, apenas copie a senha do caracter (%) para traz
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
