@@ -22,7 +22,7 @@ kubectl cluster-info
 
 ## INSTALACAO DO ARGOCD
 ### (OPCAO 1 - Instalacao via helm )
-1 - Primeiro, adicione o repositorio oficial do Argo CD Helm em sua configuração local do Helm
+1 - Adicione o repositorio oficial do Argo CD Helm em sua configuração local do Helm
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
@@ -38,9 +38,9 @@ kubectl create namespace argocd
 helm install argo-cd argo/argo-cd --namespace argocd
 ```
 
-4 - Após a instalação, verifique se os pods do Argo CD estão sendo executados corretamente no namespace argo-cd
+4 - Verifique se os pods do Argo CD estão sendo executados corretamente no namespace argocd
 ```bash
-kubectl get pods -n argo-cd
+kubectl get pods -n argocd
 ```
 
 5 - Para validar se ocorreu tudo certo, basta executar o seguinte comando para expor a porta 8080 da sua maquina
