@@ -13,3 +13,11 @@ Note que no arquivo kind.yaml foi definido a criacao do cluster, para criar o cl
 ```bash
 kind create cluster --config kind.yaml
 ```
+
+Rode os comando abaixo para verificar informacao do seu cluster e os nodes criados
+```bash
+kubectl get nodes
+kubectl cluster-info
+```
+
+Rode ta
