@@ -1,0 +1,1 @@
+# Esse Lab será focado em fazer o deploy de aplicacoes atraves do argocd
