@@ -21,7 +21,7 @@ kubectl cluster-info
 ```
 
 ## INSTALACAO DO ARGOCD
-### (OPCAO 1 - Instalacao via helm )
+### (OPCAO 1 - Instalacao via helm)
 1 - Adicione o repositorio oficial do Argo CD Helm em sua configuração local do Helm
 ```bash
 helm repo add argo https://argoproj.github.io/argo-helm
@@ -54,3 +54,5 @@ Obs: Nao copie o caracter (%)
 ```bash
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
+
+### (OPCAO 2 - Instalacao via helm)
